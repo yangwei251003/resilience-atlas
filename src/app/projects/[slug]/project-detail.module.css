@@ -1,0 +1,41 @@
+.page { --accent: #37e6d4; background: #0d1216; color: #eaf7f4; overflow: clip; }
+.hero { min-height: 100svh; padding: 7rem clamp(1.2rem,5vw,5.8rem) 4rem; }
+.heroTopline { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.heroTopline > a { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-mono); font-size: .6rem; letter-spacing: .07em; }
+.heroBody { display: grid; grid-template-columns: minmax(0,1.35fr) minmax(15rem,.65fr); align-items: end; gap: clamp(2rem,7vw,8rem); margin-top: 5rem; }
+.heroBody > div > p:first-child { color: var(--accent); }
+.hero h1 { margin: 1rem 0 0; max-width: 60rem; font-size: clamp(4rem,9vw,10rem); line-height: .82; letter-spacing: -.085em; }
+.teaser { max-width: 42rem; margin: 2rem 0 0; color: rgba(234,247,244,.66); font-family: var(--font-serif); font-size: clamp(1.1rem,2vw,1.8rem); line-height: 1.5; }
+.heroBody dl { margin: 0; border-top: 1px solid var(--accent); }
+.heroBody dl div { display: grid; grid-template-columns: 4rem 1fr; gap: 1rem; border-bottom: 1px solid rgba(234,247,244,.18); padding: 1rem 0; }
+.heroBody dt { color: var(--accent); font-family: var(--font-mono); font-size: .54rem; }
+.heroBody dd { display: flex; align-items: center; gap: .45rem; margin: 0; color: rgba(234,247,244,.62); font-size: .68rem; line-height: 1.5; }
+.blueprint { position: relative; height: min(36vw,27rem); margin-top: 5rem; overflow: hidden; border: 1px solid color-mix(in srgb,var(--accent) 48%,transparent); background: #111a20; perspective: 900px; }
+.blueprintGrid { position: absolute; inset: 0; background-image: linear-gradient(color-mix(in srgb,var(--accent) 12%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--accent) 12%,transparent) 1px,transparent 1px); background-size: 2.5rem 2.5rem; }
+.moduleOne,
+.moduleTwo,
+.moduleThree { position: absolute; display: grid; place-items: center; border: 1px solid var(--accent); background: color-mix(in srgb,var(--accent) 9%,#111a20); transform-style: preserve-3d; box-shadow: 1rem 1rem 0 rgba(0,0,0,.25); }
+.moduleOne { left: 8%; top: 26%; width: 22%; height: 45%; transform: rotateY(22deg) translateZ(30px); }
+.moduleTwo { left: 39%; top: 13%; width: 23%; height: 64%; transform: translateZ(80px); }
+.moduleThree { right: 7%; top: 31%; width: 21%; height: 43%; transform: rotateY(-22deg) translateZ(30px); }
+.blueprint span { position: absolute; top: .6rem; left: .7rem; color: var(--accent); font-family: var(--font-mono); font-size: .48rem; }
+.blueprint strong { color: var(--accent); font-size: clamp(2rem,5vw,5rem); }
+.blueprint > p { position: absolute; right: .8rem; bottom: .6rem; margin: 0; color: rgba(234,247,244,.45); font-family: var(--font-mono); font-size: .48rem; letter-spacing: .08em; }
+.tools { padding: clamp(7rem,12vw,13rem) clamp(1.2rem,7vw,8rem); background: var(--accent); color: #0d1216; }
+.tools h2 { max-width: 64rem; margin: 1.2rem 0 0; font-size: clamp(3rem,7vw,8rem); line-height: .9; letter-spacing: -.075em; }
+.tools ul { display: flex; flex-wrap: wrap; gap: .7rem; margin: 4rem 0 0; padding: 0; list-style: none; }
+.tools li { border: 2px solid #0d1216; padding: .75rem 1rem; font-family: var(--font-mono); font-size: .7rem; font-weight: 900; }
+.tools > p:last-child { max-width: 35rem; margin: 3rem 0 0 auto; font-size: .8rem; line-height: 1.8; }
+.nextCase { padding: clamp(5rem,9vw,9rem) clamp(1.2rem,7vw,8rem); }
+.nextCase > span { color: var(--accent); font-family: var(--font-mono); font-size: .58rem; letter-spacing: .1em; }
+.nextCase a { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-top: 1.4rem; padding-bottom: 1rem; border-bottom: 2px solid var(--accent); font-size: clamp(2.5rem,6vw,7rem); font-weight: 900; line-height: .95; letter-spacing: -.06em; }
+.nextCase a:hover { color: var(--accent); }
+
+@media (max-width: 760px) {
+  .hero { padding-inline: 1.1rem; }
+  .heroBody { grid-template-columns: 1fr; margin-top: 3.5rem; }
+  .blueprint { height: 68vw; min-height: 18rem; }
+  .moduleOne { left: 3%; width: 27%; }
+  .moduleTwo { left: 36%; width: 28%; }
+  .moduleThree { right: 3%; width: 27%; }
+}

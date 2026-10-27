@@ -1,0 +1,45 @@
+.page { background: #10151a; color: #eaf7f4; overflow: clip; }
+.intro { position: relative; min-height: 72svh; display: flex; flex-direction: column; justify-content: flex-end; padding: 8rem clamp(1.2rem, 5vw, 5.8rem) 4rem; overflow: hidden; border-bottom: 1px solid rgba(55, 230, 212, 0.25); }
+.intro::before { content: "AI / LAB"; position: absolute; top: 5.5rem; right: -0.04em; color: rgba(234, 247, 244, 0.035); font-family: var(--font-mono); font-size: clamp(7rem, 22vw, 23rem); font-weight: 900; line-height: 0.8; letter-spacing: -0.09em; pointer-events: none; }
+.scan { position: absolute; inset: 0; background-image: linear-gradient(rgba(55,230,212,.09) 1px, transparent 1px), linear-gradient(90deg, rgba(55,230,212,.09) 1px, transparent 1px); background-size: 3.5rem 3.5rem; mask-image: radial-gradient(circle at 72% 46%, #000, transparent 54%); }
+.kicker { position: relative; color: rgba(234, 247, 244, 0.62); }
+.kicker span { color: #37e6d4; margin-right: 0.7rem; }
+.introGrid { position: relative; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(16rem, 0.55fr); gap: clamp(2rem, 8vw, 9rem); align-items: end; margin-top: 2rem; }
+.intro h1 { margin: 0; max-width: 64rem; font-size: clamp(3.7rem, 8vw, 9.5rem); line-height: 0.86; letter-spacing: -0.08em; }
+.intro h1 span { display: block; color: #37e6d4; }
+.introNote { border-left: 1px solid #b7f34a; padding-left: 1rem; }
+.introNote strong { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; color: #b7f34a; }
+.introNote p { margin: 1rem 0 0; color: rgba(234, 247, 244, 0.62); font-size: 0.8rem; line-height: 1.8; }
+.labLegend { position: relative; display: flex; gap: 1.7rem; margin-top: 3.5rem; color: rgba(234, 247, 244, 0.48); font-family: var(--font-mono); font-size: 0.56rem; letter-spacing: 0.07em; }
+.labLegend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+.labLegend i { width: 0.34rem; height: 0.34rem; border: 1px solid #37e6d4; transform: rotate(45deg); }
+
+.principles { padding: clamp(7rem, 11vw, 12rem) clamp(1.2rem, 6vw, 7rem); background: #eaf7f4; color: #10151a; }
+.principles header { display: grid; grid-template-columns: 0.42fr 1.58fr; gap: 3rem; margin-bottom: 5rem; }
+.principles header p { color: #087d74; }
+.principles h2 { margin: 0; max-width: 60rem; font-size: clamp(2.7rem, 6vw, 7rem); line-height: 0.96; letter-spacing: -0.065em; }
+.principles ol { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; padding: 0; border-top: 2px solid #10151a; list-style: none; }
+.principles li { min-height: 18rem; padding: 1.2rem; border-right: 1px solid rgba(16,21,26,.25); }
+.principles li:last-child { border: 0; }
+.principles li span { display: block; color: #ad2e1b; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; }
+.principles li strong { display: block; margin-top: 5rem; font-size: 1.15rem; }
+.principles li p { margin: 1rem 0 0; color: rgba(16,21,26,.62); font-size: 0.8rem; line-height: 1.7; }
+
+@media (max-width: 860px) {
+  .intro { min-height: 78svh; padding-inline: 1.1rem; }
+  .introGrid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .intro h1 { font-size: clamp(3.7rem, 17vw, 7rem); }
+  .introNote { max-width: 28rem; }
+  .labLegend { flex-wrap: wrap; }
+  .principles header { grid-template-columns: 1fr; }
+  .principles ol { grid-template-columns: repeat(2, 1fr); }
+  .principles li:nth-child(2) { border-right: 0; }
+  .principles li:nth-child(-n+2) { border-bottom: 1px solid rgba(16,21,26,.25); }
+}
+
+@media (max-width: 520px) {
+  .principles ol { grid-template-columns: 1fr; }
+  .principles li,
+  .principles li:nth-child(2) { min-height: auto; border: 0; border-bottom: 1px solid rgba(16,21,26,.25); padding-block: 2rem; }
+  .principles li strong { margin-top: 2rem; }
+}

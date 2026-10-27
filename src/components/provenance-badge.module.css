@@ -1,0 +1,22 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  width: fit-content;
+  border: 1px solid currentColor;
+  padding: 0.38rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.badge[data-provenance="ai-generated"] {
+  border-style: dashed;
+}
+
+.badge[data-provenance="placeholder"] {
+  opacity: 0.92;
+}

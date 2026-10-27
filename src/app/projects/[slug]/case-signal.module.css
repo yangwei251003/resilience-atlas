@@ -1,0 +1,19 @@
+.case { display: grid; grid-template-columns: 8rem 1fr; padding: 0 clamp(1.2rem, 7vw, 8rem); }
+.case aside { position: sticky; top: 6rem; align-self: start; display: grid; justify-items: center; gap: .8rem; height: calc(100svh - 8rem); padding: 2rem 0; font-family: var(--font-mono); font-size: .75rem; font-weight: 700; letter-spacing: .12em; color: rgba(234,247,244,.7); }
+.case aside > div { position: relative; width: 1px; height: 100%; background: rgba(234,247,244,.14); }
+.case aside i { position: absolute; inset: 0; display: block; background: var(--accent); transform-origin: top; box-shadow: 0 0 1rem var(--accent); }
+.steps { border-left: 1px solid rgba(234,247,244,.14); }
+.steps article { min-height: 72svh; display: grid; grid-template-columns: 8rem minmax(12rem,.55fr) minmax(16rem,1fr); align-items: center; gap: clamp(1rem,5vw,6rem); padding: 5rem clamp(1.2rem,5vw,5rem); border-bottom: 1px solid rgba(234,247,244,.14); }
+.stepMeta span,
+.stepMeta small { display: block; font-family: var(--font-mono); }
+.stepMeta span { color: var(--accent); font-size: 1.3rem; font-weight: 900; }
+.stepMeta small { margin-top: .45rem; color: rgba(234,247,244,.7); font-size: .75rem; font-weight: 700; letter-spacing: .1em; }
+.steps h2 { margin: 0; font-size: clamp(2.5rem,5vw,5.8rem); letter-spacing: -.065em; }
+.steps p { margin: 0; max-width: 34rem; color: rgba(234,247,244,.66); font-size: clamp(.9rem,1.4vw,1.15rem); line-height: 1.9; }
+
+@media (max-width: 760px) {
+  .case { grid-template-columns: 2rem 1fr; padding-inline: 1rem; }
+  .case aside { top: 4.5rem; height: calc(100svh - 6rem); }
+  .case aside span { writing-mode: vertical-rl; }
+  .steps article { min-height: 72svh; grid-template-columns: 1fr; align-content: center; gap: 1.5rem; padding: 4rem 1.2rem; }
+}
